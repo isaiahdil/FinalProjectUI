@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Basket</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="addToBasket.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="homeLogo.png" alt="Flower Shop Logo">
+        </div>
+        <div class="header-links">
+            <a href="#" class="track-order">Track Order</a>
+            <a href="#" class="help">Help</a>
+            <img src="profile.png" alt="Profile Image">
+            <img src="basket.png" alt="Basket Image">
+        </div>
+    </header>
+    <div class="container">
+        <div class="flower-details">
+            <img src="TopFlower.jpeg" alt="Selected Flower">
+        </div>
+        <div class="delivery-details">
+            <h2 id="flower-name">Delivery Date*</h2>
+            
+            <input type="date" id="delivery-date" name="delivery-date">
+
+            <h2>Purchasing Options</h2>
+            <div class="purchasing-options">
+                <input type="radio" id="subscription" name="purchase-option" value="subscription">
+                <label for="subscription">Start a Subscription: Price + free shipping</label> <!-- need to add price-->
+                <hr>
+                <p>Best Value: Up to 30% off + free shipping on subscription deliveries</p>
+                <p>Flexible: Pick your flowers, date & recipient every month, or set it & forget it.</p>
+                <p>No Obligations: Skip as often as you like. Cancel anytime.</p>
+                
+
+                <input type="radio" id="one-time" name="purchase-option" value="one-time" checked>
+                <label for="one-time">One Time Purchase:</label>
+                <span id="flowerPrice"></span><br> <!-- need to add price-->
+            </div>
+            <div>
+                <button id="addToBasketBtn">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+   document.getElementById("addToBasketBtn").addEventListener("click", function() {
+            window.location.href = "deliveryInfo.html";
+        });
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="homeFlower.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="homeLogo.png" alt="Flower Shop Logo">
+        </div>
+        <div class="header-links">
+            <a href="#" class="track-order">Track Order</a>
+            <a href="#" class="help">Help</a>
+            <img src="profile.png" alt="Profile Image">
+            <img src="basket.png" alt="Basket Image">
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="pink-box">
+            <h2>Send her Blooms</h2>
+            <hr>
+            <p>She will love! Shop all Mother's Day Flowers and gifts!</p>
+        </div>
+        <div class="flower-image">
+            <img src="TopFlower.jpeg" alt="Flowers Image">
+        </div>
+    </div>
+    <div class="filter-sort">
+        <div class="filter">
+            <label for="filter-occasion">FILTER BY</label>
+            <select id="filter-occasion">
+                <option value="Occasion">Flower Type</option>
+                <option value="roses">Roses</option>
+                <option value="lilies">Lilies</option>
+                <option value="tulips">Tulips</option>
+                <option value="daisies">Daises</option>
+                <option value="mixed">Mixed</option>
+
+            </select>
+            <select id="filter-flower-type">
+                <option value="tulips">Occasion</option>
+                <option value="mothers day">Mother's Day</option>
+                <option value="birthday">Birthday</option>
+                <option value="thank you">Thank you</option>
+            </select>
+            <select id="filter-color">
+                <option value="color">Color</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+            </select>
+        </div>
+
+
+        <div class="sort">
+            <label for="sort-by">SORT</label>
+            <select id="sort-by">
+                <option value="low-to-high">Price Low to High</option>
+                <option value="high-to-low">Price High to Low</option>
+            </select>
+        </div>
+        <div class="flower-container" id="flowerContainer">
+        </div>
+</body>
+<script>
+    var flowers = [
+        { name: "Sugar Rush", price: 54, image: "TopFlower.jpeg" },
+        { name: "Lemonade", price: 54, image: "TopFlower.jpeg" },
+        { name: "The Angels", price: 54, image: "TopFlower.jpeg" },
+        { name: "Unbreakable", price: 59, image: "TopFlower.jpeg" },
+        { name: "Sierra Sunset", price: 59, image: "TopFlower.jpeg" },
+        { name: "Casablanca", price: 59, image: "TopFlower.jpeg" }
+    ];
+
+    function generateFlowerElements() {
+        var flowerContainer = document.getElementById("flowerContainer");
+        flowers.forEach(function (flower, index) {
+            var flowerDiv = document.createElement("div");
+            flowerDiv.classList.add("flower");
+            var flowerLink = document.createElement("a");
+            flowerLink.href = "addToBasket.html";
+            var flowerImage = document.createElement("img");
+            flowerImage.src = flower.image;
+            flowerImage.alt = "Flower " + (index + 1);
+            var flowerInfo = document.createElement("div");
+            flowerInfo.classList.add("flower-info");
+            var flowerName = document.createElement("h3");
+            flowerName.textContent = flower.name;
+            var flowerPrice = document.createElement("p");
+            flowerPrice.textContent = "from $" + flower.price;
+            flowerInfo.appendChild(flowerName);
+            flowerInfo.appendChild(flowerPrice);
+            flowerLink.appendChild(flowerImage);
+            flowerDiv.appendChild(flowerLink);
+            flowerDiv.appendChild(flowerInfo);
+            flowerContainer.appendChild(flowerDiv);
+        });
+    }
+    generateFlowerElements();
+    function navigateToAddToBasket(flowerName, flowerPrice, flowerImage) {
+    window.location.href = "addToBasket.html?name=" + encodeURIComponent(flowerName) + "&price=" + encodeURIComponent(flowerPrice) + "&image=" + encodeURIComponent(flowerImage);
+    }
+    
+</script>
+</html>

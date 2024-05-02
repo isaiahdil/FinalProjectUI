@@ -1,0 +1,37 @@
+/* Styling for the container */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the flower image */
+.flower-image {
+    flex: 1; /* Takes up 1/2 of the container width */
+    margin-right: 20px; /* Add some space between image and details */
+}
+
+/* Styling for the flower details */
+.flower-details {
+    flex: 1; /* Takes up 1/2 of the container width */
+}
+
+/* Styling for the purchase options */
+.purchase-options {
+    margin-top: 20px;
+}
+
+/* Styling for the add to basket button */
+.add-to-basket-button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-to-basket-button:hover {
+    background-color: darkgreen;
+}

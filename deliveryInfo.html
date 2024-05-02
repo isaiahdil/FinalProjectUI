@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Information</title>
+    <link rel="stylesheet" href="deliveryInfo.css">
+</head>
+<body>
+    <header>
+        <div class="buttons">
+            <button class="login" onclick="redirectToLogin()">Login</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <h2>Recipient Information</h2>
+        <div class="recipient-info">
+            <div class="row">
+                <div class="label">First Name:</div>
+                <input type="text" id="first-name" name="first-name">
+                <div class="label">Last Name:</div>
+                <input type="text" id="last-name" name="last-name">
+            </div>
+            <div class="row">
+                <div class="label">Relationship:</div>
+                <select id="relationship" name="relationship">
+                    <option value="spouse">Spouse</option>
+                    <option value="parent">Parent</option>
+                    <option value="sibling">Sibling</option>
+                    <option value="friend">Friend</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="label">Deliver to:</div>
+                <input type="text" id="deliver-to" name="deliver-to">
+            </div>
+            <div class="row">
+                <div class="label">Address:</div>
+                <input type="text" id="address" name="address">
+                <div class="label">City:</div>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="row">
+                <div class="label">State:</div>
+                <select id="state" name="state">
+                    <option value="IN">Indiana</option>
+                    <option value="MI">Michigan</option>
+                </select>
+                <div class="label">Zip Code:</div>
+                <input type="text" id="zip-code" name="zip-code">
+            </div>
+            <div class="row">
+                <button class="continue">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function redirectToLogin() {
+            window.location.href = "login.html";
+        }
+</script>
+</html>

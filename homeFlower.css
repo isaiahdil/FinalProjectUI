@@ -1,0 +1,67 @@
+/* Styling for the pink box with "Send her Blooms" */
+.pink-box {
+    background-color: pink;
+    padding: 50px;
+    width: 700px; 
+    float: left; 
+}
+
+.flower-image {
+    float: left;
+    margin-left: 20px; 
+}
+
+.filter-sort {
+    clear: both; 
+    margin-top: 20px; 
+}
+
+.filter {
+    display: inline-block;
+    margin-right: 20px; 
+}
+.sort {
+    float: right; 
+    margin-left: 20px; 
+    padding-bottom: 30px;
+}
+.filter select,
+.sort select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styling for the filter and sort labels */
+.filter label,
+.sort label {
+    font-weight: bold;
+}
+
+/* Styling for the filter and sort containers */
+.filter,
+.sort {
+    margin-bottom: 10px; 
+}
+
+
+/* Styling for the flower containers */
+.flower-container {
+    clear: both; 
+}
+
+.flower {
+    width: calc(33.33% - 20px); 
+    float: left;
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+}
+
+.flower-info {
+    text-align: left;
+}
+
